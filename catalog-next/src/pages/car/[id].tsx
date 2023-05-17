@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 const CarPage: NextPage = () => {
   return (
     <div>
-      <div>ca page</div>
+      <div>car page</div>
     </div>
   );
 };

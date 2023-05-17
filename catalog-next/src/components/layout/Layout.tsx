@@ -1,12 +1,12 @@
 import { FC, PropsWithChildren } from "react";
-import Header from "./header/Header";
+import Header from "../header/Header";
 import Meta from "../seo/Meta";
 import { IMeta } from "../seo/meta.interface";
-import Footer from "./Footer";
+import Footer from "../Footer/Footer";
 import dynamic from "next/dynamic";
 
 // Щоб Footer грузився тільки на клієнті -->
-const DynamicFooter = dynamic(() => import("./Footer"), {
+const DynamicFooter = dynamic(() => import("../Footer/Footer"), {
   ssr: false, // Вимикаємо серверний рендеринг
 });
 // <--
