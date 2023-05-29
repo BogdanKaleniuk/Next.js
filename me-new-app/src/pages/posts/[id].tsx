@@ -8,6 +8,7 @@ interface PropsType {
 
 export default function PostPage({ post }: PropsType) {
   const { query, back } = useRouter();
+  const router = useRouter();
 
   const goBack = () => {
     back();
@@ -27,7 +28,13 @@ export default function PostPage({ post }: PropsType) {
           height={200}
           quality={1}
         /> */}
+        <button onClick={() => router.push("/posts")}>All posts</button>
+        <hr />
         <button onClick={goBack}>Go back</button>
+        <hr />
+        <button onClick={() => router.push(`/posts/${post.id + 1}`)}>
+          Next post
+        </button>
       </div>
     </div>
   );
